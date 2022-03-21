@@ -491,132 +491,132 @@ ebbtn3.addEventListener('click', function(){
       ctx.drawImage(headeyebrowsred3,((400-headeyebrowsred3.width)/2.24),98);
     }
   });
-ebbtn4.addEventListener('click', function(){
-  var headeyebrows4 = new Image();
-  headeyebrows4.src = 'Eyebrows-Blonde-4.png';
-
-  headeyebrows4.onload = function(){
-    ctx.drawImage(headeyebrows4,((400-headeyebrows4.width)/2.24),98);
-  }
-  sfctbl.style.display = 'none';
-  efctbl0.style.display = 'none';
-  ebctbl0.style.display = 'block';
-  ebctbl.style.display = 'none';
-  ebctbl2.style.display = 'none';
-  ebctbl3.style.display = 'none';
-  ebctbl4.style.display = 'block';
-  ebctbl5.style.display = 'none';
-  ebctbl6.style.display = 'none';
-  hctbl0.style.display = 'none';
-});
-  ebblon4btn .addEventListener('click', function(){
-    var headeyebrowsblon4 = new Image();
-    headeyebrowsblon4.src = 'Eyebrows-Blonde-4.png';
-
-    headeyebrowsblon4.onload = function(){
-      ctx.drawImage(headeyebrowsblon4,((400-headeyebrowsblon4.width)/2.24),98);
+  ebbtn4.addEventListener('click', function(){
+    var headeyebrows4 = new Image();
+    headeyebrows4.src = 'Eyebrows-Blonde-4.png';
+  
+    headeyebrows4.onload = function(){
+      ctx.drawImage(headeyebrows4,((400-headeyebrows4.width)/1.78),98);
     }
+    sfctbl.style.display = 'none';
+    efctbl0.style.display = 'none';
+    ebctbl0.style.display = 'block';
+    ebctbl.style.display = 'none';
+    ebctbl2.style.display = 'none';
+    ebctbl3.style.display = 'none';
+    ebctbl4.style.display = 'block';
+    ebctbl5.style.display = 'none';
+    ebctbl6.style.display = 'none';
+    hctbl0.style.display = 'none';
   });
-  ebbrow4btn .addEventListener('click', function(){
-    var headeyebrowsbrow4 = new Image();
-    headeyebrowsbrow4.src = 'Eyebrows-Brown-4.png';
-
-    headeyebrowsbrow4.onload = function(){
-      ctx.drawImage(headeyebrowsbrow4,((400-headeyebrowsbrow4.width)/2.24),98);
+    ebblon4btn .addEventListener('click', function(){
+      var headeyebrowsblon4 = new Image();
+      headeyebrowsblon4.src = 'Eyebrows-Blonde-4.png';
+  
+      headeyebrowsblon4.onload = function(){
+        ctx.drawImage(headeyebrowsblon4,((400-headeyebrowsblon4.width)/1.78),98);
+      }
+    });
+    ebbrow4btn .addEventListener('click', function(){
+      var headeyebrowsbrow4 = new Image();
+      headeyebrowsbrow4.src = 'Eyebrows-Brown-4.png';
+  
+      headeyebrowsbrow4.onload = function(){
+        ctx.drawImage(headeyebrowsbrow4,((400-headeyebrowsbrow4.width)/1.78),98);
+      }
+    });
+    ebred4btn .addEventListener('click', function(){
+      var headeyebrowsred4 = new Image();
+      headeyebrowsred4.src = 'Eyebrows-Red-4.png';
+  
+      headeyebrowsred4.onload = function(){
+        ctx.drawImage(headeyebrowsred4,((400-headeyebrowsred4.width)/1.78),98);
+      }
+    });
+  ebbtn5.addEventListener('click', function(){
+    var headeyebrows5 = new Image();
+    headeyebrows5.src = 'Eyebrows-Blonde-5.png';
+  
+    headeyebrows5.onload = function(){
+      ctx.drawImage(headeyebrows5,((400-headeyebrows5.width)/1.78),98);
     }
+    sfctbl.style.display = 'none';
+    efctbl0.style.display = 'none';
+    ebctbl0.style.display = 'block';
+    ebctbl.style.display = 'none';
+    ebctbl2.style.display = 'none';
+    ebctbl3.style.display = 'none';
+    ebctbl4.style.display = 'none';
+    ebctbl5.style.display = 'block';
+    ebctbl6.style.display = 'none';
+    hctbl0.style.display = 'none';
   });
-  ebred4btn .addEventListener('click', function(){
-    var headeyebrowsred4 = new Image();
-    headeyebrowsred4.src = 'Eyebrows-Red-4.png';
-
-    headeyebrowsred4.onload = function(){
-      ctx.drawImage(headeyebrowsred4,((400-headeyebrowsred4.width)/2.24),98);
+    ebblon5btn .addEventListener('click', function(){
+      var headeyebrowsblon5 = new Image();
+      headeyebrowsblon5.src = 'Eyebrows-Blonde-5.png';
+  
+      headeyebrowsblon5.onload = function(){
+        ctx.drawImage(headeyebrowsblon5,((400-headeyebrowsblon5.width)/1.78),98);
+      }
+    });
+    ebbrow5btn .addEventListener('click', function(){
+      var headeyebrowsbrow5 = new Image();
+      headeyebrowsbrow5.src = 'Eyebrows-Brown-5.png';
+  
+      headeyebrowsbrow5.onload = function(){
+        ctx.drawImage(headeyebrowsbrow5,((400-headeyebrowsbrow5.width)/1.78),98);
+      }
+    });
+    ebred5btn .addEventListener('click', function(){
+      var headeyebrowsred5 = new Image();
+      headeyebrowsred5.src = 'Eyebrows-Red-5.png';
+  
+      headeyebrowsred5.onload = function(){
+        ctx.drawImage(headeyebrowsred5,((400-headeyebrowsred5.width)/1.78),98);
+      }
+    });
+  ebbtn6.addEventListener('click', function(){
+    var headeyebrows6 = new Image();
+    headeyebrows6.src = 'Eyebrows-Blonde-6.png';
+  
+    headeyebrows6.onload = function(){
+      ctx.drawImage(headeyebrows6,((400-headeyebrows6.width)/1.78),98);
     }
+    sfctbl.style.display = 'none';
+    efctbl0.style.display = 'none';
+    ebctbl0.style.display = 'block';
+    ebctbl.style.display = 'none';
+    ebctbl2.style.display = 'none';
+    ebctbl3.style.display = 'none';
+    ebctbl4.style.display = 'none';
+    ebctbl5.style.display = 'none';
+    ebctbl6.style.display = 'block';
+    hctbl0.style.display = 'none';
   });
-ebbtn5.addEventListener('click', function(){
-  var headeyebrows5 = new Image();
-  headeyebrows5.src = 'Eyebrows-Blonde-5.png';
-
-  headeyebrows5.onload = function(){
-    ctx.drawImage(headeyebrows5,((400-headeyebrows5.width)/2.24),98);
-  }
-  sfctbl.style.display = 'none';
-  efctbl0.style.display = 'none';
-  ebctbl0.style.display = 'block';
-  ebctbl.style.display = 'none';
-  ebctbl2.style.display = 'none';
-  ebctbl3.style.display = 'none';
-  ebctbl4.style.display = 'none';
-  ebctbl5.style.display = 'block';
-  ebctbl6.style.display = 'none';
-  hctbl0.style.display = 'none';
-});
-  ebblon5btn .addEventListener('click', function(){
-    var headeyebrowsblon5 = new Image();
-    headeyebrowsblon5.src = 'Eyebrows-Blonde-5.png';
-
-    headeyebrowsblon5.onload = function(){
-      ctx.drawImage(headeyebrowsblon5,((400-headeyebrowsblon5.width)/2.24),98);
-    }
-  });
-  ebbrow5btn .addEventListener('click', function(){
-    var headeyebrowsbrow5 = new Image();
-    headeyebrowsbrow5.src = 'Eyebrows-Brown-5.png';
-
-    headeyebrowsbrow5.onload = function(){
-      ctx.drawImage(headeyebrowsbrow5,((400-headeyebrowsbrow5.width)/2.24),98);
-    }
-  });
-  ebred5btn .addEventListener('click', function(){
-    var headeyebrowsred5 = new Image();
-    headeyebrowsred5.src = 'Eyebrows-Red-5.png';
-
-    headeyebrowsred5.onload = function(){
-      ctx.drawImage(headeyebrowsred5,((400-headeyebrowsred5.width)/2.24),98);
-    }
-  });
-ebbtn6.addEventListener('click', function(){
-  var headeyebrows6 = new Image();
-  headeyebrows6.src = 'Eyebrows-Blonde-6.png';
-
-  headeyebrows6.onload = function(){
-    ctx.drawImage(headeyebrows6,((400-headeyebrows6.width)/2.24),98);
-  }
-  sfctbl.style.display = 'none';
-  efctbl0.style.display = 'none';
-  ebctbl0.style.display = 'block';
-  ebctbl.style.display = 'none';
-  ebctbl2.style.display = 'none';
-  ebctbl3.style.display = 'none';
-  ebctbl4.style.display = 'none';
-  ebctbl5.style.display = 'none';
-  ebctbl6.style.display = 'block';
-  hctbl0.style.display = 'none';
-});
-  ebblon6btn .addEventListener('click', function(){
-    var headeyebrowsblon6 = new Image();
-    headeyebrowsblon6.src = 'Eyebrows-Blonde-6.png';
-
-    headeyebrowsblon6.onload = function(){
-      ctx.drawImage(headeyebrowsblon6,((400-headeyebrowsblon6.width)/2.24),98);
-    }
-  });
-  ebbrow6btn .addEventListener('click', function(){
-    var headeyebrowsbrow6 = new Image();
-    headeyebrowsbrow6.src = 'Eyebrows-Brown-6.png';
-
-    headeyebrowsbrow6.onload = function(){
-      ctx.drawImage(headeyebrowsbrow6,((400-headeyebrowsbrow6.width)/2.24),98);
-    }
-  });
-  ebred6btn .addEventListener('click', function(){
-    var headeyebrowsred6 = new Image();
-    headeyebrowsred6.src = 'Eyebrows-Red-6.png';
-
-    headeyebrowsred6.onload = function(){
-      ctx.drawImage(headeyebrowsred6,((400-headeyebrowsred6.width)/2.24),98);
-    }
-  });
+    ebblon6btn .addEventListener('click', function(){
+      var headeyebrowsblon6 = new Image();
+      headeyebrowsblon6.src = 'Eyebrows-Blonde-6.png';
+  
+      headeyebrowsblon6.onload = function(){
+        ctx.drawImage(headeyebrowsblon6,((400-headeyebrowsblon6.width)/1.78),98);
+      }
+    });
+    ebbrow6btn .addEventListener('click', function(){
+      var headeyebrowsbrow6 = new Image();
+      headeyebrowsbrow6.src = 'Eyebrows-Brown-6.png';
+  
+      headeyebrowsbrow6.onload = function(){
+        ctx.drawImage(headeyebrowsbrow6,((400-headeyebrowsbrow6.width)/1.78),98);
+      }
+    });
+    ebred6btn .addEventListener('click', function(){
+      var headeyebrowsred6 = new Image();
+      headeyebrowsred6.src = 'Eyebrows-Red-6.png';
+  
+      headeyebrowsred6.onload = function(){
+        ctx.drawImage(headeyebrowsred6,((400-headeyebrowsred6.width)/1.78),98);
+      }
+    });
 
 
 //EYES
