@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% auto;
+}
+
+#char{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+#canvas{
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+    margin-left: 5%;
+    width: 90%;
+    height: 93%;
+    border: 1px solid gray;
+}
+
+#sele{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+
+#se{
+    margin-left: 5%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+td button{
+    width: 150px;
+    height: 150px;
+}
+
+td button img{
+    width: 35%;
+}
+
+#headOptions, #bodyOptions, #legsOptions{
+    display: none;
+}
+
+#femSkinColor, #malSkinColor, #eyebrowcolor, #eyebrowcolor2, #eyebrowcolor3, #eyebrowcolor4, #eyebrowcolor5, #eyebrowcolor6, #eyef1, #eyef2, #eyef3, #eyem1, #eyem2, #eyem3, #hairf1, #hairf2, #hairf3, #hairm1, #hairm2, #hairm3{
+    display: none;
+}
+
+#femSkinColor button, #malSkinColor button{
+    width: 50;
+    height: 50%;
+}
+
+#eyebrowcolor button, #eyebrowcolor2 button, #eyebrowcolor3 button, #eyebrowcolor4 button, #eyebrowcolor5 button, #eyebrowcolor6 button{
+    width: 25%;
+    height: 25%;
+}
+
+#eyef1 button, #eyef2 button, #eyef3 button, #eyem1 button, #eyem2 button, #eyem3 button{
+    width: 25%;
+    height: 25%;
+}
+
+#hairf1 button, #hairf2 button, #hairf3 button, #hairm1 button, #hairm2 button, #hairm3 button{
+    width: 25%;
+    height: 25%;
+}
