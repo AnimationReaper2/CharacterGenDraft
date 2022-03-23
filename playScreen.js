@@ -1,7 +1,121 @@
+const screen1 = document.getElementById('playScreen');
+//INSTRUCTIONS
+
+const modal = document.getElementById("myModal");
+const instructionsButton = document.getElementById("instructions");
+const span = document.getElementsByClassName("close")[0];
+
+instructionsButton.addEventListener("click", () => {
+    modal.style.display = "block";
+});
+  
+span.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+  
+window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+};
+
+//GAME SLOTS
+
+const modal2 = document.getElementById("gameSlots");
+const playBTN = document.getElementById("play");
+const span2 = document.getElementsByClassName("back")[0];
+
+playBTN.addEventListener("click", () => {
+    modal2.style.display = "block";
+});
+  
+span2.addEventListener("click", () => {
+    modal2.style.display = "none";
+});
+
+window.onclick = function (event) {
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+};
+
+//SLOT SCREENS
+
+const charGen = document.getElementById('main');
+
+const game1 = document.getElementById('s1');
+const game2 = document.getElementById('s2');
+const game3 = document.getElementById('s3');
+
+game1.addEventListener("click", () => {
+    charGen.style.display = 'grid';
+    screen1.style.display = 'none';
+});
+game2.addEventListener("click", () => {
+    charGen.style.display = 'grid';
+    screen1.style.display = 'none';
+});
+game3.addEventListener("click", () => {
+    charGen.style.display = 'grid';
+    screen1.style.display = 'none';
+});
+
+//NAME
+const save = document.getElementById('savebtn');
+save.addEventListener('click', function(){
+  var val = document.getElementById('name').value;
+  document.getElementById('header').innerHTML = val;
+  
+  const d = new Date();
+  let time = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+  let date = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+  document.getElementById('right-side').innerHTML = date;
+  document.getElementById('footer').innerHTML = time;
+});
+
+//CLEAR
+const clear = document.getElementById('clearbtn');
+clear.addEventListener('click', function(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+})
+
+//CHARACTER GEN
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 canvas.width = 400;
 canvas.height = 625;
+
+const back = document.getElementsByClassName('close2')[0];
+
+back.addEventListener("click", () => {
+  charGen.style.display = "none";
+  screen1.style.display = 'block';
+});
+
+const fem1tbl = document.getElementById('fem1');
+const fem2tbl = document.getElementById('fem2');
+const fem3tbl = document.getElementById('fem3');
+const fem4tbl = document.getElementById('fem4');
+const fem5tbl = document.getElementById('fem5');
+const fem6tbl = document.getElementById('fem6');
+const fem7tbl = document.getElementById('fem7');
+const fem8tbl = document.getElementById('fem8');
+const fem9tbl = document.getElementById('fem9');
+const fem10tbl = document.getElementById('fem10');
+const fem11tbl = document.getElementById('fem11');
+const fem12tbl = document.getElementById('fem12');
+const mal1tbl = document.getElementById('mal1');
+const mal2tbl = document.getElementById('mal2');
+const mal3tbl = document.getElementById('mal3');
+const mal4tbl = document.getElementById('mal4');
+const mal5tbl = document.getElementById('mal5');
+const mal6tbl = document.getElementById('mal6');
+const mal7tbl = document.getElementById('mal7');
+const mal8tbl = document.getElementById('mal8');
+const mal9tbl = document.getElementById('mal9');
+const mal10tbl = document.getElementById('mal10');
+const mal11tbl = document.getElementById('mal11');
+const mal12tbl = document.getElementById('mal12');
 //=======================================================
 //HEAD
 //=======================================================
@@ -10,6 +124,8 @@ const headtbl = document.getElementById('headOptions');
 
 const sfctbl = document.getElementById('femSkinColor');
 const smctbl = document.getElementById('malSkinColor');
+
+const hb = document.getElementsByClassName('headBody');
 
 const ebctbl0 = document.getElementById('ebc');
 const ebctbl = document.getElementById('eyebrowcolor');
@@ -253,11 +369,42 @@ gfbtn.addEventListener('click', function(){
   headbodyfemale.onload = function(){
     ctx.drawImage(headbodyfemale,((400-headbodyfemale.width)/2),50);
   }
+  //skin fem
   sfctbl.style.display = 'block';
+  //skin mal
   smctbl.style.display = 'none';
+  //eyebrow
   ebctbl0.style.display = 'none';
+  //eyes
   efctbl0.style.display = 'none';
+  //hair
   hctbl0.style.display = 'none';
+  //fem
+  fem1tbl.style.display = 'block';
+  fem2tbl.style.display = 'block';
+  fem3tbl.style.display = 'block';
+  fem4tbl.style.display = 'block';
+  fem5tbl.style.display = 'block';
+  fem6tbl.style.display = 'block';
+  fem7tbl.style.display = 'block';
+  fem8tbl.style.display = 'block';
+  fem9tbl.style.display = 'block';
+  fem10tbl.style.display = 'block';
+  fem11tbl.style.display = 'block';
+  fem12tbl.style.display = 'block';
+  //mal
+  mal1tbl.style.display = 'none';
+  mal2tbl.style.display = 'none';
+  mal3tbl.style.display = 'none';
+  mal4tbl.style.display = 'none';
+  mal5tbl.style.display = 'none';
+  mal6tbl.style.display = 'none';
+  mal7tbl.style.display = 'none';
+  mal8tbl.style.display = 'none';
+  mal9tbl.style.display = 'none';
+  mal10tbl.style.display = 'none';
+  mal11tbl.style.display = 'none';
+  mal12tbl.style.display = 'none';
 });
 
 gfbtn1.addEventListener('click', function(){
@@ -312,11 +459,42 @@ gmbtn.addEventListener('click', function(){
   headbodymale.onload = function(){
     ctx.drawImage(headbodymale,((400-headbodymale.width)/2),50);
   }
+  //skin mal
   smctbl.style.display = 'block';
+  //skin fem
   sfctbl.style.display = 'none';
+  //eyebrow
   ebctbl0.style.display = 'none';
+  //eye
   efctbl0.style.display = 'none';
+  //hair
   hctbl0.style.display = 'none';
+  //fem
+  fem1tbl.style.display = 'none';
+  fem2tbl.style.display = 'none';
+  fem3tbl.style.display = 'none';
+  fem4tbl.style.display = 'none';
+  fem5tbl.style.display = 'none';
+  fem6tbl.style.display = 'none';
+  fem7tbl.style.display = 'none';
+  fem8tbl.style.display = 'none';
+  fem9tbl.style.display = 'none';
+  fem10tbl.style.display = 'none';
+  fem11tbl.style.display = 'none';
+  fem12tbl.style.display = 'none';
+  //mal
+  mal1tbl.style.display = 'block';
+  mal2tbl.style.display = 'block';
+  mal3tbl.style.display = 'block';
+  mal4tbl.style.display = 'block';
+  mal5tbl.style.display = 'block';
+  mal6tbl.style.display = 'block';
+  mal7tbl.style.display = 'block';
+  mal8tbl.style.display = 'block';
+  mal9tbl.style.display = 'block';
+  mal10tbl.style.display = 'block';
+  mal11tbl.style.display = 'block';
+  mal12tbl.style.display = 'block';
 });
 
 gmbtn1.addEventListener('click', function(){
@@ -372,9 +550,15 @@ ebbtn.addEventListener('click', function(){
   headeyebrows1.onload = function(){
     ctx.drawImage(headeyebrows1,((400-headeyebrows1.width)/2.24),98);
   }
+  //skin fem
   sfctbl.style.display = 'none';
+  //skin mal
+  smctbl.style.display =  'none';
+  //eye
   efctbl0.style.display = 'none';
+  //eyebrows
   ebctbl0.style.display = 'block';
+  //eyebrow color
   ebctbl.style.display = 'block';
   ebctbl2.style.display = 'none';
   ebctbl3.style.display = 'none';
@@ -491,132 +675,132 @@ ebbtn3.addEventListener('click', function(){
       ctx.drawImage(headeyebrowsred3,((400-headeyebrowsred3.width)/2.24),98);
     }
   });
-  ebbtn4.addEventListener('click', function(){
-    var headeyebrows4 = new Image();
-    headeyebrows4.src = 'Eyebrows-Blonde-4.png';
-  
-    headeyebrows4.onload = function(){
-      ctx.drawImage(headeyebrows4,((400-headeyebrows4.width)/1.78),98);
+ebbtn4.addEventListener('click', function(){
+  var headeyebrows4 = new Image();
+  headeyebrows4.src = 'Eyebrows-Blonde-4.png';
+
+  headeyebrows4.onload = function(){
+    ctx.drawImage(headeyebrows4,((400-headeyebrows4.width)/1.78),98);
+  }
+  smctbl.style.display = 'none';
+  efctbl0.style.display = 'none';
+  ebctbl0.style.display = 'block';
+  ebctbl.style.display = 'none';
+  ebctbl2.style.display = 'none';
+  ebctbl3.style.display = 'none';
+  ebctbl4.style.display = 'block';
+  ebctbl5.style.display = 'none';
+  ebctbl6.style.display = 'none';
+  hctbl0.style.display = 'none';
+});
+  ebblon4btn .addEventListener('click', function(){
+    var headeyebrowsblon4 = new Image();
+    headeyebrowsblon4.src = 'Eyebrows-Blonde-4.png';
+
+    headeyebrowsblon4.onload = function(){
+      ctx.drawImage(headeyebrowsblon4,((400-headeyebrowsblon4.width)/1.78),98);
     }
-    sfctbl.style.display = 'none';
-    efctbl0.style.display = 'none';
-    ebctbl0.style.display = 'block';
-    ebctbl.style.display = 'none';
-    ebctbl2.style.display = 'none';
-    ebctbl3.style.display = 'none';
-    ebctbl4.style.display = 'block';
-    ebctbl5.style.display = 'none';
-    ebctbl6.style.display = 'none';
-    hctbl0.style.display = 'none';
   });
-    ebblon4btn .addEventListener('click', function(){
-      var headeyebrowsblon4 = new Image();
-      headeyebrowsblon4.src = 'Eyebrows-Blonde-4.png';
-  
-      headeyebrowsblon4.onload = function(){
-        ctx.drawImage(headeyebrowsblon4,((400-headeyebrowsblon4.width)/1.78),98);
-      }
-    });
-    ebbrow4btn .addEventListener('click', function(){
-      var headeyebrowsbrow4 = new Image();
-      headeyebrowsbrow4.src = 'Eyebrows-Brown-4.png';
-  
-      headeyebrowsbrow4.onload = function(){
-        ctx.drawImage(headeyebrowsbrow4,((400-headeyebrowsbrow4.width)/1.78),98);
-      }
-    });
-    ebred4btn .addEventListener('click', function(){
-      var headeyebrowsred4 = new Image();
-      headeyebrowsred4.src = 'Eyebrows-Red-4.png';
-  
-      headeyebrowsred4.onload = function(){
-        ctx.drawImage(headeyebrowsred4,((400-headeyebrowsred4.width)/1.78),98);
-      }
-    });
-  ebbtn5.addEventListener('click', function(){
-    var headeyebrows5 = new Image();
-    headeyebrows5.src = 'Eyebrows-Blonde-5.png';
-  
-    headeyebrows5.onload = function(){
-      ctx.drawImage(headeyebrows5,((400-headeyebrows5.width)/1.78),98);
+  ebbrow4btn .addEventListener('click', function(){
+    var headeyebrowsbrow4 = new Image();
+    headeyebrowsbrow4.src = 'Eyebrows-Brown-4.png';
+
+    headeyebrowsbrow4.onload = function(){
+      ctx.drawImage(headeyebrowsbrow4,((400-headeyebrowsbrow4.width)/1.78),98);
     }
-    sfctbl.style.display = 'none';
-    efctbl0.style.display = 'none';
-    ebctbl0.style.display = 'block';
-    ebctbl.style.display = 'none';
-    ebctbl2.style.display = 'none';
-    ebctbl3.style.display = 'none';
-    ebctbl4.style.display = 'none';
-    ebctbl5.style.display = 'block';
-    ebctbl6.style.display = 'none';
-    hctbl0.style.display = 'none';
   });
-    ebblon5btn .addEventListener('click', function(){
-      var headeyebrowsblon5 = new Image();
-      headeyebrowsblon5.src = 'Eyebrows-Blonde-5.png';
-  
-      headeyebrowsblon5.onload = function(){
-        ctx.drawImage(headeyebrowsblon5,((400-headeyebrowsblon5.width)/1.78),98);
-      }
-    });
-    ebbrow5btn .addEventListener('click', function(){
-      var headeyebrowsbrow5 = new Image();
-      headeyebrowsbrow5.src = 'Eyebrows-Brown-5.png';
-  
-      headeyebrowsbrow5.onload = function(){
-        ctx.drawImage(headeyebrowsbrow5,((400-headeyebrowsbrow5.width)/1.78),98);
-      }
-    });
-    ebred5btn .addEventListener('click', function(){
-      var headeyebrowsred5 = new Image();
-      headeyebrowsred5.src = 'Eyebrows-Red-5.png';
-  
-      headeyebrowsred5.onload = function(){
-        ctx.drawImage(headeyebrowsred5,((400-headeyebrowsred5.width)/1.78),98);
-      }
-    });
-  ebbtn6.addEventListener('click', function(){
-    var headeyebrows6 = new Image();
-    headeyebrows6.src = 'Eyebrows-Blonde-6.png';
-  
-    headeyebrows6.onload = function(){
-      ctx.drawImage(headeyebrows6,((400-headeyebrows6.width)/1.78),98);
+  ebred4btn .addEventListener('click', function(){
+    var headeyebrowsred4 = new Image();
+    headeyebrowsred4.src = 'Eyebrows-Red-4.png';
+
+    headeyebrowsred4.onload = function(){
+      ctx.drawImage(headeyebrowsred4,((400-headeyebrowsred4.width)/1.78),98);
     }
-    sfctbl.style.display = 'none';
-    efctbl0.style.display = 'none';
-    ebctbl0.style.display = 'block';
-    ebctbl.style.display = 'none';
-    ebctbl2.style.display = 'none';
-    ebctbl3.style.display = 'none';
-    ebctbl4.style.display = 'none';
-    ebctbl5.style.display = 'none';
-    ebctbl6.style.display = 'block';
-    hctbl0.style.display = 'none';
   });
-    ebblon6btn .addEventListener('click', function(){
-      var headeyebrowsblon6 = new Image();
-      headeyebrowsblon6.src = 'Eyebrows-Blonde-6.png';
-  
-      headeyebrowsblon6.onload = function(){
-        ctx.drawImage(headeyebrowsblon6,((400-headeyebrowsblon6.width)/1.78),98);
-      }
-    });
-    ebbrow6btn .addEventListener('click', function(){
-      var headeyebrowsbrow6 = new Image();
-      headeyebrowsbrow6.src = 'Eyebrows-Brown-6.png';
-  
-      headeyebrowsbrow6.onload = function(){
-        ctx.drawImage(headeyebrowsbrow6,((400-headeyebrowsbrow6.width)/1.78),98);
-      }
-    });
-    ebred6btn .addEventListener('click', function(){
-      var headeyebrowsred6 = new Image();
-      headeyebrowsred6.src = 'Eyebrows-Red-6.png';
-  
-      headeyebrowsred6.onload = function(){
-        ctx.drawImage(headeyebrowsred6,((400-headeyebrowsred6.width)/1.78),98);
-      }
-    });
+ebbtn5.addEventListener('click', function(){
+  var headeyebrows5 = new Image();
+  headeyebrows5.src = 'Eyebrows-Blonde-5.png';
+
+  headeyebrows5.onload = function(){
+    ctx.drawImage(headeyebrows5,((400-headeyebrows5.width)/1.78),98);
+  }
+  smctbl.style.display = 'none';
+  efctbl0.style.display = 'none';
+  ebctbl0.style.display = 'block';
+  ebctbl.style.display = 'none';
+  ebctbl2.style.display = 'none';
+  ebctbl3.style.display = 'none';
+  ebctbl4.style.display = 'none';
+  ebctbl5.style.display = 'block';
+  ebctbl6.style.display = 'none';
+  hctbl0.style.display = 'none';
+});
+  ebblon5btn .addEventListener('click', function(){
+    var headeyebrowsblon5 = new Image();
+    headeyebrowsblon5.src = 'Eyebrows-Blonde-5.png';
+
+    headeyebrowsblon5.onload = function(){
+      ctx.drawImage(headeyebrowsblon5,((400-headeyebrowsblon5.width)/1.78),98);
+    }
+  });
+  ebbrow5btn .addEventListener('click', function(){
+    var headeyebrowsbrow5 = new Image();
+    headeyebrowsbrow5.src = 'Eyebrows-Brown-5.png';
+
+    headeyebrowsbrow5.onload = function(){
+      ctx.drawImage(headeyebrowsbrow5,((400-headeyebrowsbrow5.width)/1.78),98);
+    }
+  });
+  ebred5btn .addEventListener('click', function(){
+    var headeyebrowsred5 = new Image();
+    headeyebrowsred5.src = 'Eyebrows-Red-5.png';
+
+    headeyebrowsred5.onload = function(){
+      ctx.drawImage(headeyebrowsred5,((400-headeyebrowsred5.width)/1.78),98);
+    }
+  });
+ebbtn6.addEventListener('click', function(){
+  var headeyebrows6 = new Image();
+  headeyebrows6.src = 'Eyebrows-Blonde-6.png';
+
+  headeyebrows6.onload = function(){
+    ctx.drawImage(headeyebrows6,((400-headeyebrows6.width)/1.78),98);
+  }
+  smctbl.style.display = 'none';
+  efctbl0.style.display = 'none';
+  ebctbl0.style.display = 'block';
+  ebctbl.style.display = 'none';
+  ebctbl2.style.display = 'none';
+  ebctbl3.style.display = 'none';
+  ebctbl4.style.display = 'none';
+  ebctbl5.style.display = 'none';
+  ebctbl6.style.display = 'block';
+  hctbl0.style.display = 'none';
+});
+  ebblon6btn .addEventListener('click', function(){
+    var headeyebrowsblon6 = new Image();
+    headeyebrowsblon6.src = 'Eyebrows-Blonde-6.png';
+
+    headeyebrowsblon6.onload = function(){
+      ctx.drawImage(headeyebrowsblon6,((400-headeyebrowsblon6.width)/1.78),98);
+    }
+  });
+  ebbrow6btn .addEventListener('click', function(){
+    var headeyebrowsbrow6 = new Image();
+    headeyebrowsbrow6.src = 'Eyebrows-Brown-6.png';
+
+    headeyebrowsbrow6.onload = function(){
+      ctx.drawImage(headeyebrowsbrow6,((400-headeyebrowsbrow6.width)/1.78),98);
+    }
+  });
+  ebred6btn .addEventListener('click', function(){
+    var headeyebrowsred6 = new Image();
+    headeyebrowsred6.src = 'Eyebrows-Red-6.png';
+
+    headeyebrowsred6.onload = function(){
+      ctx.drawImage(headeyebrowsred6,((400-headeyebrowsred6.width)/1.78),98);
+    }
+  });
 
 
 //EYES
@@ -753,7 +937,7 @@ em1btn.addEventListener('click', function(){
   headeyesmale1.onload = function(){
     ctx.drawImage(headeyesmale1,((400-headeyesmale1.width)/1.78),101);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
   efctbl0.style.display = 'block';
   efctbl1.style.display = 'none';
@@ -795,7 +979,7 @@ em2btn.addEventListener('click', function(){
   headeyesmale2.onload = function(){
     ctx.drawImage(headeyesmale2,((400-headeyesmale2.width)/1.78),101);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
   efctbl0.style.display = 'block';
   efctbl1.style.display = 'none';
@@ -837,7 +1021,7 @@ em3btn.addEventListener('click', function(){
   headeyesmale3.onload = function(){
     ctx.drawImage(headeyesmale3,((400-headeyesmale3.width)/1.78),101);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
   efctbl0.style.display = 'block';
   efctbl1.style.display = 'none';
@@ -917,7 +1101,7 @@ mmbtn1.addEventListener('click', function(){
   headmouthmale1.onload = function(){
     ctx.drawImage(headmouthmale1,((400-headmouthmale1.width)/1.78),117);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
   efctbl0.style.display = 'none';
   hctbl0.style.display = 'none';
@@ -929,7 +1113,7 @@ mmbtn2.addEventListener('click', function(){
   headmouthmale2.onload = function(){
     ctx.drawImage(headmouthmale2,((400-headmouthmale2.width)/1.78),118);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
   efctbl0.style.display = 'none';
   hctbl0.style.display = 'none';
@@ -941,7 +1125,7 @@ mmbtn3.addEventListener('click', function(){
   headmouthmale3.onload = function(){
     ctx.drawImage(headmouthmale3,((400-headmouthmale3.width)/1.78),117);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
   efctbl0.style.display = 'none';
   hctbl0.style.display = 'none';
@@ -1080,7 +1264,7 @@ hm1btn.addEventListener('click', function(){
   headhairmale.onload = function(){
     ctx.drawImage(headhairmale,((400-headhairmale.width)/1.78),50);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   efctbl0.style.display = 'none';
   ebctbl0.style.display = 'none';
   hctbl0.style.display = 'block';
@@ -1122,7 +1306,7 @@ hm2btn.addEventListener('click', function(){
   headhairmale2.onload = function(){
     ctx.drawImage(headhairmale2,((400-headhairmale2.width)/1.76),50);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   efctbl0.style.display = 'none';
   ebctbl0.style.display = 'none';
   hctbl0.style.display = 'block';
@@ -1164,7 +1348,7 @@ hm3btn.addEventListener('click', function(){
   headhairmale3.onload = function(){
     ctx.drawImage(headhairmale3,((400-headhairmale3.width)/1.76),42);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   efctbl0.style.display = 'none';
   ebctbl0.style.display = 'none';
   hctbl0.style.display = 'block';
@@ -1209,6 +1393,7 @@ nbtn1.addEventListener('click', function(){
   }
   sfctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
+  efctbl0.style.display = 'none';
   hctbl0.style.display = 'none';
 });
 nbtn2.addEventListener('click', function(){
@@ -1220,6 +1405,7 @@ nbtn2.addEventListener('click', function(){
   }
   sfctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
+  efctbl0.style.display = 'none';
   hctbl0.style.display = 'none';
 });
 nbtn3.addEventListener('click', function(){
@@ -1229,8 +1415,9 @@ nbtn3.addEventListener('click', function(){
   headnose3.onload = function(){
     ctx.drawImage(headnose3,((400-headnose3.width)/1.78),103);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
+  efctbl0.style.display = 'none';
   hctbl0.style.display = 'none';
 });
 nbtn4.addEventListener('click', function(){
@@ -1240,8 +1427,9 @@ nbtn4.addEventListener('click', function(){
   headnose4.onload = function(){
     ctx.drawImage(headnose4,((400-headnose4.width)/1.78),103);
   }
-  sfctbl.style.display = 'none';
+  smctbl.style.display = 'none';
   ebctbl0.style.display = 'none';
+  efctbl0.style.display = 'none';
   hctbl0.style.display = 'none';
 });
 

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="playScreen">
+        <div class="title">
+            <p>Title</p>
+        </div>
+        <div class="buttons">
+            <button id="play">PLAY</button>
+            <button id="instructions">INSTRUCTIONS</button>
+        </div>
+        
+        
+        <div id="myModal">
+            <div id="modal-content">
+                <span class="close">&times;</span>
+                <p class="in">This project is a work in progress...</p> <br> <p class="in">The character generator overlaps in images. Doesn't set down in a certain order. Also can't save the character...</p> <br> <p class="in">Can save the name and time, but have only been able to get it to save in one of the slots.</p>
+            </div>
+        </div>
+
+        <div id="gameSlots">
+            <div id="slot-content">
+                <span class="back">&times;</span>
+                <div class="slot-parent">
+                    <button class="slot" id="s1">
+                        <div class="grid">
+                            <div class="item" id="header">name</div>
+                            <div class="img" id="left-side"></div>
+                            <div class="item" id="article">room</div>
+                            <div class="item2" id="right-side">date</div>
+                            <div class="item2" id="footer">time</div>
+                        </div>
+                    </button>
+                    <button class="slot" id="s2">
+                        <div class="grid">
+                            <div class="item" id="header">name</div>
+                            <div class="img" id="left-side"></div>
+                            <div class="item" id="article">room</div>
+                            <div class="item2" id="right-side">date</div>
+                            <div class="item2" id="footer">time</div>
+                        </div>
+                    </button>
+                    <button class="slot" id="s3">
+                        <div class="grid">
+                            <div class="item" id="header">name</div>
+                            <div class="img" id="left-side"></div>
+                            <div class="item" id="article">room</div>
+                            <div class="item2" id="right-side">date</div>
+                            <div class="item2" id="footer">time</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="main" align="center">
+        <div id="char">
+            <span class="close2">&times;</span>
+            <input type="text" id="name" placeholder="NAME"> 
+            <button id="savebtn">Save</button>
+            <button id="clearbtn">Clear</button>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div id="sele">
+            
+            <button id="head">Head</button>
+            <button id="body">Body</button>
+            <button id="legs">Legs</button>
+
+            <table id="headOptions">
+                <tr>
+                    <td>Gender</td>
+                </tr>
+                <tr>
+                    <td><button id="genFem"><img src="Body-Female.png" alt="" ></button></td>
+                    <td><button id="genMal"><img src="Body-Male.png" alt="" ></button></td>
+                </tr>
+                <tr>
+                    <td id="femSkinColor">
+                        <button id="skinfem1"><img src="Body-Female-2.png" alt="" ></button>
+                        <button id="skinfem2"><img src="Body-Female-3.png" alt="" ></button>
+                        <button id="skinfem3"><img src="Body-Female-4.png" alt="" ></button>
+                        <button id="skinfem4"><img src="Body-Female-5.png" alt="" ></button>
+                        <button id="skinfem5"><img src="Body-Female-6.png" alt="" ></button>
+                    </td>
+                    <td id="malSkinColor">
+                        <button id="skinmal1"><img src="Body-Male-2.png" alt="" ></button>
+                        <button id="skinmal2"><img src="Body-Male-3.png" alt="" ></button>
+                        <button id="skinmal3"><img src="Body-Male-4.png" alt="" ></button>
+                        <button id="skinmal4"><img src="Body-Male-5.png" alt="" ></button>
+                        <button id="skinmal5"><img src="Body-Male-6.png" alt="" ></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eyebrows</td>
+                </tr>
+                <tr id="fem1">
+                    <td><button id="eyebrow1"><img src="Eyebrows-Blonde.png" alt="" ></button></td>
+                    <td><button id="eyebrow2"><img src="Eyebrows-Blonde-2.png" alt="" ></button></td>
+                    <td><button id="eyebrow3"><img src="Eyebrows-Blonde-3.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal1">
+                    <td><button id="eyebrow4"><img src="Eyebrows-Blonde-4.png" alt="" ></button></td>
+                    <td><button id="eyebrow5"><img src="Eyebrows-Blonde-5.png" alt="" ></button></td>
+                    <td><button id="eyebrow6"><img src="Eyebrows-Blonde-6.png" alt="" ></button></td>
+                </tr>
+                <tr id="ebc">
+                    <td id="eyebrowcolor">
+                        <button id="eyebrowBlon1"><img src="Eyebrows-Blonde.png" alt="" ></button>
+                        <button id="eyebrowBrow1"><img src="Eyebrows-Brown.png" alt="" ></button>
+                        <button id="eyebrowRed1"><img src="Eyebrows-Red.png" alt="" ></button>
+                    </td>
+                    <td id="eyebrowcolor2">
+                        <button id="eyebrowBlon2"><img src="Eyebrows-Blonde-2.png" alt="" ></button>
+                        <button id="eyebrowBrow2"><img src="Eyebrows-Brown-2.png" alt="" ></button>
+                        <button id="eyebrowRed2"><img src="Eyebrows-Red-2.png" alt="" ></button>
+                    </td>
+                    <td id="eyebrowcolor3">
+                        <button id="eyebrowBlon3"><img src="Eyebrows-Blonde-3.png" alt="" ></button>
+                        <button id="eyebrowBrow3"><img src="Eyebrows-Brown-3.png" alt="" ></button>
+                        <button id="eyebrowRed3"><img src="Eyebrows-Red-3.png" alt="" ></button>
+                    </td>
+                    <td id="eyebrowcolor4">
+                        <button id="eyebrowBlon4"><img src="Eyebrows-Blonde-4.png" alt="" ></button>
+                        <button id="eyebrowBrow4"><img src="Eyebrows-Brown-4.png" alt="" ></button>
+                        <button id="eyebrowRed4"><img src="Eyebrows-Red-4.png" alt="" ></button>
+                    </td>
+                    <td id="eyebrowcolor5">
+                        <button id="eyebrowBlon5"><img src="Eyebrows-Blonde-5.png" alt="" ></button>
+                        <button id="eyebrowBrow5"><img src="Eyebrows-Brown-5.png" alt="" ></button>
+                        <button id="eyebrowRed5"><img src="Eyebrows-Red-5.png" alt="" ></button>
+                    </td>
+                    <td id="eyebrowcolor6">
+                        <button id="eyebrowBlon6"><img src="Eyebrows-Blonde-6.png" alt="" ></button>
+                        <button id="eyebrowBrow6"><img src="Eyebrows-Brown-6.png" alt="" ></button>
+                        <button id="eyebrowRed6"><img src="Eyebrows-Red-6.png" alt="" ></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eyes</td>
+                </tr>
+                <tr id="fem2">
+                    <td><button id="eyeFem1"><img src="Eyes-Female-Blue.png" alt="" ></button></td>
+                    <td><button id="eyeFem2"><img src="Eyes-Female-Blue-2.png" alt="" ></button></td>
+                    <td><button id="eyeFem3"><img src="Eyes-Female-Blue-3.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal2">
+                    <td><button id="eyeMal1"><img src="Eyes-Male-Blue.png" alt="" ></button></td>
+                    <td><button id="eyeMal2"><img src="Eyes-Male-Blue-2.png" alt="" ></button></td>
+                    <td><button id="eyeMal3"><img src="Eyes-Male-Blue-3.png" alt="" ></button></td>
+                </tr>
+                <tr id="efc">
+                    <td id="eyef1">
+                        <button id="eyeFemBlue1"><img src="Eyes-Female-Blue.png" alt="" ></button>
+                        <button id="eyeFemBrown1"><img src="Eyes-Female-Brown.png" alt="" ></button>
+                        <button id="eyeFemGreen1"><img src="Eyes-Female-Green.png" alt="" ></button>
+                    </td>
+                    <td id="eyef2">
+                        <button id="eyeFemBlue2"><img src="Eyes-Female-Blue-2.png" alt="" ></button>
+                        <button id="eyeFemBrown2"><img src="Eyes-Female-Brown-2.png" alt="" ></button>
+                        <button id="eyeFemGreen2"><img src="Eyes-Female-Green-2.png" alt="" ></button>
+                    </td>
+                    <td id="eyef3">
+                        <button id="eyeFemBlue3"><img src="Eyes-Female-Blue-3.png" alt="" ></button>
+                        <button id="eyeFemBrown3"><img src="Eyes-Female-Brown-3.png" alt="" ></button>
+                        <button id="eyeFemGreen3"><img src="Eyes-Female-Green-3.png" alt="" ></button>
+                    </td>
+                    <td id="eyem1">
+                        <button id="eyeMalBlue1"><img src="Eyes-Male-Blue.png" alt="" ></button>
+                        <button id="eyeMalBrown1"><img src="Eyes-Male-Brown.png" alt="" ></button>
+                        <button id="eyeMalGreen1"><img src="Eyes-Male-Green.png" alt="" ></button>
+                    </td>
+                    <td id="eyem2">
+                        <button id="eyeMalBlue2"><img src="Eyes-Male-Blue-2.png" alt="" ></button>
+                        <button id="eyeMalBrown2"><img src="Eyes-Male-Brown-2.png" alt="" ></button>
+                        <button id="eyeMalGreen2"><img src="Eyes-Male-Green-2.png" alt="" ></button>
+                    </td>
+                    <td id="eyem3">
+                        <button id="eyeMalBlue3"><img src="Eyes-Male-Blue-3.png" alt="" ></button>
+                        <button id="eyeMalBrown3"><img src="Eyes-Male-Brown-3.png" alt="" ></button>
+                        <button id="eyeMalGreen3"><img src="Eyes-Male-Green-3.png" alt="" ></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mouth</td>
+                </tr>
+                <tr id="fem3">
+                    <td><button id="mouthFem1"><img src="Mouth-Female.png" alt="" ></button></td>
+                    <td><button id="mouthFem2"><img src="Mouth-Female-2.png" alt="" ></button></td>
+                    <td><button id="mouthFem3"><img src="Mouth-Female-3.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal3">
+                    <td><button id="mouthMal1"><img src="Mouth-Male.png" alt="" ></button></td>
+                    <td><button id="mouthMal2"><img src="Mouth-Male-2.png" alt="" ></button></td>
+                    <td><button id="mouthMal3"><img src="Mouth-Male-3.png" alt="" ></button></td>
+                </tr>
+                <tr>
+                    <td>Hair</td>
+                </tr>
+                <tr id="fem4">
+                    <td><button id="hairFem1"><img src="Hair-Female-Blonde.png" alt="" ></button></td>
+                    <td><button id="hairFem2"><img src="Hair-Female-Blonde-2.png" alt="" ></button></td>
+                    <td><button id="hairFem3"><img src="Hair-Female-Blonde-3.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal4">
+                    <td><button id="hairMal1"><img src="Hair-Male-Blonde.png" alt="" ></button></td>
+                    <td><button id="hairMal2"><img src="Hair-Male-Blonde-2.png" alt="" ></button></td>
+                    <td><button id="hairMal3"><img src="Hair-Male-Blonde-3.png" alt="" ></button></td>
+                </tr>
+                <tr id="hfc">
+                    <td id="hairf1">
+                        <button id="hairFemBlon1"><img src="Hair-Female-Blonde.png" alt="" ></button>
+                        <button id="hairFemBrown1"><img src="Hair-Female-Brown.png" alt="" ></button>
+                        <button id="hairFemRed1"><img src="Hair-Female-Red.png" alt="" ></button>
+                    </td>
+                    <td id="hairf2">
+                        <button id="hairFemBlon2"><img src="Hair-Female-Blonde-2.png" alt="" ></button>
+                        <button id="hairFemBrown2"><img src="Hair-Female-Brown-2.png" alt="" ></button>
+                        <button id="hairFemRed2"><img src="Hair-Female-Red-2.png" alt="" ></button>
+                    </td>
+                    <td id="hairf3">
+                        <button id="hairFemBlon3"><img src="Hair-Female-Blonde-3.png" alt="" ></button>
+                        <button id="hairFemBrown3"><img src="Hair-Female-Brown-3.png" alt="" ></button>
+                        <button id="hairFemRed3"><img src="Hair-Female-Red-3.png" alt="" ></button>
+                    </td>
+                    <td id="hairm1">
+                        <button id="hairMalBlon1"><img src="Hair-Male-Blonde.png" alt="" ></button>
+                        <button id="hairMalBrown1"><img src="Hair-Male-Brown.png" alt="" ></button>
+                        <button id="hairMalRed1"><img src="Hair-Male-Red.png" alt="" ></button>
+                    </td>
+                    <td id="hairm2">
+                        <button id="hairMalBlon2"><img src="Hair-Male-Blonde-2.png" alt="" ></button>
+                        <button id="hairMalBrown2"><img src="Hair-Male-Brown-2.png" alt="" ></button>
+                        <button id="hairMalRed2"><img src="Hair-Male-Red-2.png" alt="" ></button>
+                    </td>
+                    <td id="hairm3">
+                        <button id="hairMalBlon3"><img src="Hair-Male-Blonde-3.png" alt="" ></button>
+                        <button id="hairMalBrown3"><img src="Hair-Male-Brown-3.png" alt="" ></button>
+                        <button id="hairMalRed3"><img src="Hair-Male-Red-3.png" alt="" ></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nose</td>
+                </tr>
+                <tr id="fem5">
+                    <td><button id="nose1"><img src="Nose.png" alt="" ></button></td>
+                    <td><button id="nose2"><img src="Nose-2.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal5">
+                    <td><button id="nose3"><img src="Nose-3.png" alt="" ></button></td>
+                    <td><button id="nose4"><img src="Nose-4.png" alt="" ></button></td>
+                </tr>
+            </table>
+
+            <table id="bodyOptions">
+                <tr>
+                    <td>Shirts</td>
+                </tr>
+                <tr id="fem6">
+                    <td><button id="clothFemShirt"><img src="Clothes-Female-Shirt.png" alt="" ></button></td>
+                    <td><button id="clothFemShirt2"><img src="Clothes-Female-Shirt-2.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal6">
+                    <td><button id="clothMalShirt"><img src="Clothes-Male-Shirt.png" alt="" ></button></td>
+                    <td><button id="clothMalShirt2"><img src="Clothes-Male-Shirt-2.png" alt="" ></button></td>
+                </tr>
+                <tr>
+                    <td>Jackets</td>
+                </tr>
+                <tr id="fem7">
+                    <td><button id="clothFemJacket"><img src="Clothes-Female-Shirt-4.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal7">
+                    <td><button id="clothMalJacket"><img src="Clothes-Male-Jacket.png" alt="" ></button></td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                </tr>
+                <tr id="fem8">
+                    <td><button id="clothFemOther"><img src="Clothes-Female-Shirt-3.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal8">
+                    <td><button id="clothMalOther"><img src="Clothes-Male-Sweater.png" alt="" ></button></td>
+                </tr>
+            </table>
+
+            <table id="legsOptions">
+                <tr>
+                    <td>Pants</td>
+                </tr>
+                <tr id="fem9">
+                    <td><button id="clothFemPant1"><img src="Clothes-Female-Pants.png" alt="" ></button></td>
+                    <td><button id="clothFemPant2"><img src="Clothes-Female-Pants-2.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal9">
+                    <td><button id="clothMalPant1"><img src="Clothes-Male-Pants.png" alt="" ></button></td>
+                    <td><button id="clothMalPant2"><img src="Clothes-Male-Pants-2.png" alt="" ></button></td>
+                </tr>
+                <tr>
+                    <td>Shorts</td>
+                </tr>
+                <tr id="fem10">
+                    <td><button id="clothFemShort"><img src="Clothes-Female-Shorts.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal10">
+                    <td><button id="clothMalShort"><img src="Clothes-Male-Shorts.png" alt="" ></button></td>
+                </tr>
+                <tr>
+                    <td>Shoes</td>
+                </tr>
+                <tr id="fem11">
+                    <td><button id="clothFemShoe"><img src="Clothes-Female-Shoes.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal11">
+                    <td><button id="clothMalShoe"><img src="Clothes-Male-Shoes.png" alt="" ></button></td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                </tr>
+                <tr id="fem12">
+                    <td><button id="clothFemOther2"><img src="Clothes-Female-Skirts.png" alt="" ></button></td>
+                </tr>
+                <tr id="mal12">
+                    <td><button id="clothMalOther2"><img src="Clothes-Male-Sweats.png" alt="" ></button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <canvas id="board">
+            
+    </canvas>
+
+    <script src="playScreen.js"></script>
+    <script src="characterGen.js"></script>
+</body>
+</html>

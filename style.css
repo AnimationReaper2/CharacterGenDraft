@@ -1,0 +1,304 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #888;
+}
+  
+#playScreen{
+    background: url(/PlayScreen/Practice.Start.Page.jpg); 
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.title{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250px;
+    color: white;
+}
+
+.buttons{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#play{
+    font-size: 25px;
+    padding: 15px;
+    margin: 10%;
+    border-radius: 25px;
+}
+
+/* INSTRUCTIONS */
+#instructions{
+    font-size: 25px;
+    padding: 15px;
+    margin: 10%;
+    border-radius: 25px;
+}
+
+.in {
+    line-height: 1.5;
+    color: white;
+    font-size: 20px;
+}
+#myModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#modal-content{
+    background-color: black;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* GAME SLOTS */
+
+#gameSlots {
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+  }
+  
+#slot-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.back{
+    color: #aaaaaa;
+    margin: 10%;
+    float: right;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.slot-parent{
+    display: grid;
+    grid-template-rows: auto, auto, auto;
+    background-color: gray;
+    position: fixed;
+    width: 75%;
+    height: 75%;
+    margin: 10%;
+    align-items: center;
+}
+
+.slot{
+    border: 1px solid black;
+    height: 75%;
+    margin: 1.5%;
+    background-color: #aaaaaa;
+}
+
+.grid{
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-areas:
+            'left-side header header right-side'
+            'left-side article article footer';
+}
+
+.item{
+    background-color: lightgray;
+    text-align: center;
+    padding: 25px;
+    font-size: 30px;
+}
+
+.item2{
+    background-color: lightgray;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+}
+
+#header{
+    grid-area: header;
+}
+#left-side{
+    grid-area: left-side;
+}
+#article{
+    grid-area: article;
+}
+#right-side{
+    grid-area: right-side;
+}
+
+.img{
+    background-image: url(GameSlots/Profile.Picture.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.back:hover,
+.back:focus{
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#board{
+    display: none;
+}
+
+/* GENERATOR */
+
+#main{
+    height: 80%;
+    width: 90%;
+    margin-left: 90px;
+    display: none;
+    grid-template-columns: 40% auto;
+}
+
+#char{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+#canvas{
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+    width: 90%;
+    height: 93%;
+    border: 1px solid black;
+}
+
+#sele{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: whitesmoke;
+}
+
+.close2{
+    color: #aaaaaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px;
+}
+  
+.close2:hover,
+.close2:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#name{
+    font-size: 15px;
+    margin-top: 5px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#head, #body, #legs, #savebtn, #clearbtn{
+    margin: 5;
+    padding: 5;
+    width: 150;
+    background-color: lightgray;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+#head:hover, #body:hover, #legs:hover, #savebtn:hover, #clearbtn:hover{
+    background-color: #888;
+}
+
+td{
+    font-size: 13px;
+}
+
+td button{
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    background-color: lightgray;
+}
+
+td button:hover{
+    background-color: #888;
+}
+
+td button img{
+    width: 35%;
+}
+
+#headOptions, #bodyOptions, #legsOptions{
+    display: none;
+}
+
+#femSkinColor, #malSkinColor, #eyebrowcolor, #eyebrowcolor2, #eyebrowcolor3, #eyebrowcolor4, #eyebrowcolor5, #eyebrowcolor6, #eyef1, #eyef2, #eyef3, #eyem1, #eyem2, #eyem3, #hairf1, #hairf2, #hairf3, #hairm1, #hairm2, #hairm3, #fem1, #fem2, #fem3, #fem4, #fem5, #fem6, #fem7, #fem8, #fem9, #fem10, #fem11, #fem12, #mal1, #mal2, #mal3, #mal4, #mal5, #mal6, #mal7, #mal8, #mal9, #mal10, #mal11, #mal12{
+    display: none;
+}
+
+#femSkinColor button, #malSkinColor button{
+    width: 10%;
+    height: 10%;
+}
+
+#eyebrowcolor button, #eyebrowcolor2 button, #eyebrowcolor3 button, #eyebrowcolor4 button, #eyebrowcolor5 button, #eyebrowcolor6 button{
+    width: 25%;
+    height: 25%;
+}
+
+#eyef1 button, #eyef2 button, #eyef3 button, #eyem1 button, #eyem2 button, #eyem3 button{
+    width: 25%;
+    height: 25%;
+}
+
+#hairf1 button, #hairf2 button, #hairf3 button, #hairm1 button, #hairm2 button, #hairm3 button{
+    width: 25%;
+    height: 25%;
+}
